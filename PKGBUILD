@@ -2,27 +2,18 @@
 pkgname=mocktext
 pkgver=0
 pkgrel=1
-epoch=
 pkgdesc="make MoCk TeXt"
 arch=(x86_64)
 url="https://github.com/cjmakes/mocktext"
-license=('MIT')
-groups=()
-depends=()
-makedepends=()
-checkdepends=()
-optdepends=()
-provides=()
-conflicts=()
+license=(MIT)
+depends=(glibc gcc-libs)
+makedepends=(rust git)
+provides=(mocktext)
+conflicts=(mocktext)
 replaces=()
-backup=()
-options=()
-install=
-changelog=
-source=()
-noextract=()
-md5sums=()
-validpgpkeys=()
+source=("${pkgname}::git+${url}")
+sha512sums=(SKIP)
+
 
 build() {
   cargo build --release --locked --all-features --target-dir=target
