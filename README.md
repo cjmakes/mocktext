@@ -10,5 +10,4 @@ pretty cool.
 
 
 # Limitations
-- ascii only, unicode is hard
-- non-portable, only works for x86/x86_64, no fallbacks
+- ascii only, unicode is hard, also unchecked
